@@ -30,7 +30,7 @@
   }
 
   *{margin:0;padding:0;box-sizing:border-box}
-  html{scroll-behavior:smooth}
+  html{scroll-behavior:smooth;scroll-padding-top:88px}
   body{
     font-family:'Instrument Sans',sans-serif;
     background:var(--paper);
@@ -161,8 +161,9 @@
 
   /* ===== SECTION SHELL ===== */
   section{position:relative}
-  .sec{min-height:100vh;display:flex;align-items:center;padding:3.2rem 0}
-  .sec-head{max-width:820px;margin-bottom:2.2rem}
+  section{scroll-margin-top:80px}
+  .sec{padding:clamp(4.5rem,8vh,7rem) 0}
+  .sec-head{max-width:820px;margin-bottom:2.6rem}
   .sec-head.center{margin-inline:auto;text-align:center}
   .sec-head h2{font-size:clamp(2.1rem,3.3vw,3.05rem);margin:1rem 0;font-weight:700}
   .sec-head p{font-size:clamp(1.1rem,1.5vw,1.3rem);color:var(--muted)}
@@ -203,10 +204,10 @@
   .step-line{position:absolute;top:3.1rem;right:-.6rem;color:rgba(63,176,238,.4);display:block}
 
   /* ===== SOLUTION / features ===== */
-  .features-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.1rem}
+  .features-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.3rem}
   .feat{
     background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);
-    padding:1.6rem;transition:.3s;position:relative;overflow:hidden;
+    padding:1.9rem;transition:.3s;position:relative;overflow:hidden;
   }
   .feat::after{content:"";position:absolute;inset:0;background:linear-gradient(160deg,rgba(0,139,216,.06),transparent);opacity:0;transition:.3s}
   .feat:hover{transform:translateY(-6px);box-shadow:var(--shadow-md);border-color:rgba(0,139,216,.3)}
@@ -217,9 +218,9 @@
 
   /* ===== PARCOURS ===== */
   .journey{background:var(--sand)}
-  .timeline{position:relative;margin-top:.25rem}
-  .timeline::before{content:"";position:absolute;left:24px;top:12px;bottom:12px;width:2px;background:linear-gradient(var(--aqua),var(--ember))}
-  .tl-item{position:relative;display:flex;gap:1.4rem;padding:.28rem 0}
+  .timeline{position:relative;margin-top:.5rem}
+  .timeline::before{content:"";position:absolute;left:26px;top:12px;bottom:12px;width:2px;background:linear-gradient(var(--aqua),var(--ember))}
+  .tl-item{position:relative;display:flex;gap:1.5rem;padding:.8rem 0}
   .tl-dot{width:50px;height:50px;border-radius:50%;background:var(--paper);border:2px solid var(--aqua);display:grid;place-items:center;flex-shrink:0;z-index:1;font-family:'Bricolage Grotesque';font-weight:700;color:var(--aqua-deep);box-shadow:0 6px 16px -8px rgba(0,139,216,.5)}
   .tl-body{padding-top:.35rem}
   .tl-body h3{font-size:1.45rem;margin-bottom:.25rem}
@@ -253,7 +254,7 @@
   .map-card svg{width:82%;height:82%}
 
   /* ===== CTA / DIAGNOSTIC ===== */
-  .cta{min-height:100vh;display:flex;align-items:center;padding:3.2rem 0}
+  .cta{padding:clamp(4.5rem,8vh,7rem) 0}
   .cta-card{
     background:linear-gradient(150deg,var(--forest),var(--ink));border-radius:34px;
     padding:clamp(2.2rem,5vw,4rem);position:relative;overflow:hidden;
